@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    padding-top: 1rem;
+    width: 100%;
+}
+
+
+@media (max-width: 640px) {
+    .container{
+        flex-direction: column;
+
+    }
+}

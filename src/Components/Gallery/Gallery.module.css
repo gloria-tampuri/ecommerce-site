@@ -1,0 +1,73 @@
+.cover{
+   
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.focus{
+    width:100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  
+    overflow: hidden;
+}
+
+.focus img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.thumbnail{
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    gap: 2rem;
+}
+
+.nail img{
+    width:100%;
+    border-radius: 10px;
+}
+
+.nail img:hover{
+opacity: 50%;
+}
+
+.onNailClick{
+    border-radius: 1px solid var(--orange-prime);
+}
+
+@media (max-width: 640px) { 
+    .cover{
+        width: 100%;
+        padding: 0;
+    }
+    .focus{
+        width: 100%;
+    }
+    .thumbnail{
+        display: none  ;
+       
+    }
+
+    .focus img{
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 800px){
+    .cover{
+        width: 100%;
+        padding: 0;
+    }
+
+    .focus{
+        width: 100%;
+    }
+
+    .nail img{
+        width: 4rem;
+        border-radius: 5px;
+    }
+}
