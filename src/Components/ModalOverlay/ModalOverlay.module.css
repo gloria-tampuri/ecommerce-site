@@ -1,0 +1,30 @@
+.backdrop{ 
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.507);
+    z-index: 10;
+}
+
+.wrap{
+    position: absolute;
+    width: 70vw;
+    height: 100vh;
+    background-color: white;
+}
+
+.closeIcon{
+    padding: 1rem;
+}
+
+.modalnav {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.modalnav ul li{
+    list-style: none;
+    padding: 0.5rem 0;
+    font-weight: 700;
+}

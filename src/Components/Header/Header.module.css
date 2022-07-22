@@ -24,19 +24,19 @@
     font-size: 2rem;
     color:var(  --verydark-blue)
 }
-nav ul{
+.bignavigation ul{
     display: flex;
     gap: 2rem;
 }
 
-nav ul li{
+.bignavigation ul li{
     list-style: none;
    color: var(--dark-grayish-blue);
    border-bottom: 3px solid transparent;
   
 }
 
-nav ul li:hover {
+.bignavigation ul li:hover {
    
     border-bottom: 3px solid var(--orange-prime);
 }
@@ -47,11 +47,13 @@ nav ul li:hover {
     gap: 1rem;
 }
 .cart{
-    width:1.2rem
+    width:1.2rem;
+    cursor: pointer;
 }
 
 .avatar{
     width: 2rem;
+    cursor: pointer;
 }
 
 

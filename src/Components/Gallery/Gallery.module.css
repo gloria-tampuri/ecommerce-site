@@ -3,20 +3,22 @@
     width: 50%;
     margin: 0 auto;
     padding: 2rem;
+    position: relative;
 }
 
 .focus{
     width:100%;
     margin: 0 auto;
     margin-top: 2rem;
-  
+    z-index:-10;
     overflow: hidden;
 }
 
 .focus img{
     width: 100%;
     border-radius: 10px;
-}
+    z-index:-10;
+    }
 
 .thumbnail{
     width: 100%;
@@ -38,6 +40,39 @@ opacity: 50%;
     border-radius: 1px solid var(--orange-prime);
 }
 
+.frontBack{
+   
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: none;
+    justify-content: space-between;
+    position:absolute;
+    top: 10rem;
+}
+
+.previous{
+    background-color: white;
+   width: 2rem;
+   height: 2rem;
+   display: grid;
+   place-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.next{
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-content: center;
+     border-radius: 50%;
+     cursor: pointer;
+}
+
+
+
 @media (max-width: 640px) { 
     .cover{
         width: 100%;
@@ -53,6 +88,9 @@ opacity: 50%;
 
     .focus img{
         border-radius: 0;
+    }
+    .frontBack{
+        display: flex;
     }
 }
 
