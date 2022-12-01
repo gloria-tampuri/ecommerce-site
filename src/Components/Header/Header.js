@@ -4,7 +4,7 @@ import ModalOverlay from '../ModalOverlay/ModalOverlay'
 
 import classes from './Header.module.css'
 
-const Header = () => {
+const Header = ({quantity}) => {
 
     const [isToggle, setIsToggle] = useState(false)
     const[menuToggle, setMenuToggle]=useState(false)
@@ -45,12 +45,13 @@ const Header = () => {
 
                 <div className={classes.profile}>
                     <img src='/images/icon-cart.svg' alt='icon-cart' className={classes.cart} onClick={toggleCartHandler} />
+                  {quantity > 0 &&  <div className={classes.numberInCart}>{quantity}</div>}
                     <img src='/images/image-avatar.png' alt='avatar'
                         className={classes.avatar} />
                 </div>
 
             </div>
-            {isToggle && <EmptyCart />}
+            {isToggle && <EmptyCart quantity={quantity} />}
 
         </>
     )

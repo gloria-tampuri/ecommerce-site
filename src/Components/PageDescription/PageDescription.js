@@ -1,7 +1,21 @@
-import React from 'react'
+import React, {useState}from 'react'
 import classes from './PageDescription.module.css'
 
-const PageDescription = () => {
+const PageDescription = ({receiveQuantity}) => {
+const [quantity,setQuantity] =useState(0)
+
+const addToQuantity=()=>{
+  setQuantity(quantity + 1)
+}
+
+const subFromQuantity=()=>{
+  setQuantity(quantity - 1)
+}
+
+const addtoCart=()=>{
+  receiveQuantity(quantity);
+}
+
   return (
     <div className={classes.wrap}>
       <h5>SNEAKER COMPANY</h5>
@@ -17,14 +31,14 @@ const PageDescription = () => {
 
       <div className={classes.addtoCart}>
         <div className={classes.plusorminus}>
-        <div > <img src='./images/icon-minus.svg'/> </div>
-        <div> <span>0</span></div>
-        <div> <img src='./images/icon-plus.svg'/></div>
+        <div className={classes.increament} onClick={subFromQuantity}> <img src='./images/icon-minus.svg' /> </div>
+        <div> <span>{quantity}</span></div>
+        <div  className={classes.increament}  onClick={addToQuantity}> <img src='./images/icon-plus.svg' /></div>
       </div>
 
-      <div className={classes.addtocartbtn}> 
-      <div><img src='./images/icon-cart.svg'/></div>
-      <div><span>Add to cart</span></div>
+      <div className={classes.addtocartbtn} onClick={addtoCart}> 
+      <div><img src='./images/icon-cart.svg' /></div>
+      <div ><span>Add to cart</span></div>
       </div>
       </div>
 

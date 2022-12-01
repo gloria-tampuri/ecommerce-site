@@ -5,11 +5,11 @@ import PageDescription from '../PageDescription/PageDescription'
 import classes from './HeroContainer.module.css'
 
 
-const HeroContainer = () => {
+const HeroContainer = ({receiveQuantity}) => {
   return (
     <div className={classes.container}>
        <Gallery/>
-       <PageDescription/>
+       <PageDescription receiveQuantity={receiveQuantity}/>
      </div>
   )
 }
